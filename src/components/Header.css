@@ -1,0 +1,14 @@
+/* src/components/Header.css */
+.header {
+  background: #333;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  height: 50px; /* 根据需要调整高度 */
+  width: auto;
+}

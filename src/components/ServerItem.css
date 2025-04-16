@@ -1,0 +1,215 @@
+/* src/components/ServerItem.css */
+
+.server-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #cccccc;
+  transition: background 0.3s;
+  padding: 6px 0;
+}
+
+.server-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.server-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.server-image {
+  width: 120px; /* 固定宽度 */
+  height: 70px; /* 固定高度 */
+  border-radius: 5px;
+  object-fit: cover; /* 保持图片比例不失真，并裁剪多余部分 */
+  margin-right: 15px;
+  flex-shrink: 0; /* 确保图片容器不会被收缩 */
+}
+
+.server-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* 确保容器隐藏溢出内容 */
+}
+
+.server-name,
+.server-description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Scrolling effect when 'scrolling' class is applied */
+.server-name.scrolling,
+.server-description.scrolling {
+  animation: scrollText 10s linear infinite;
+  display: inline-block;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.server-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.server-description {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.server-map-mode {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.server-map-mode .icon {
+  margin-right: 5px;
+}
+
+.server-stats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+  color: #555;
+}
+
+.stats-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.admin-count,
+.real-players,
+.players {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.admin-count {
+  font-size: 20px;
+  color: #555;
+}
+.bot-count,
+.real-players,
+.players {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bot-count {
+  font-size: 20px;
+  color: #555;
+}
+
+.real-players {
+  font-size: 20px;
+  color: #555;
+}
+
+.players {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+
+.players .stat-icon {
+  color: #1976d2;
+  margin-right: 8px;
+}
+
+.players .spectators,
+.players .queue {
+  margin-left: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 1 auto;
+}
+
+.stat-icon {
+  color: #1976d2;
+}
+
+.actions {
+  position: relative;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #777;
+}
+
+.menu {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.menu-item {
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+.favorite-button .icon {
+  transition: color 0.3s;
+}
+
+.favorite-button .icon:hover {
+  color: gold;
+}

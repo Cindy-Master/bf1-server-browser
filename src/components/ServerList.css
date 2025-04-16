@@ -1,0 +1,23 @@
+/* src/components/ServerList.css */
+
+/* src/components/ServerList.css */
+
+.server-list {
+  width: 85%;
+  max-height: 80vh; /* 最大高度为视口高度的80% */
+  background: rgba(255, 255, 255, 0.8); /* 将 alpha 从 0.95 调整为 0.8 */
+  border-radius: 10px;
+  overflow-y: auto; /* 保持垂直滚动 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.no-servers {
+  width: 85%;
+  max-height: 80vh; /* 最大高度为视口高度的80% */
+  background: rgba(255, 255, 255, 0.8); /* 将 alpha 从 0.95 调整为 0.8 */
+  border-radius: 10px;
+  overflow-y: auto; /* 保持垂直滚动 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}

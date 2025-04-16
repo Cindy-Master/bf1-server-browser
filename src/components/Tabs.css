@@ -1,0 +1,22 @@
+/* src/components/Tabs.css */
+.tabs {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .tab-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background 0.3s;
+  }
+  
+  .tab-button:hover,
+  .tab-button.active {
+    background: #555;
+    border-radius: 5px;
+  }
+  
